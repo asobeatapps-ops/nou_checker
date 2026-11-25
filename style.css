@@ -7,3 +7,24 @@
 .title-symbol svg{display:block;width:24px;height:28px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 
 .completion-particles{position:absolute!important;inset:0;pointer-events:none;overflow:hidden}.completion-particles i{position:absolute;width:5px;height:11px;top:-15px;background:#ffd36a;opacity:0;transform:rotate(var(--angle))}.completion-particles i:nth-child(3n){height:5px;background:#b9eddf}.complete-dialog[open] .completion-particles i{animation:digitalFall var(--duration) var(--delay) linear infinite}.reduced .completion-particles{display:none}.title-result.newly-unlocked:after{content:'';position:absolute;width:3px;height:3px;right:45px;top:45px;background:var(--accent);box-shadow:15px -15px 0 var(--accent),-30px 5px 0 var(--accent),25px 30px 0 var(--accent),-20px -20px 0 var(--accent),-40px 30px 0 var(--accent);pointer-events:none;opacity:0;animation:newParticles 1s ease-out forwards}@keyframes digitalFall{0%{transform:translateY(0) rotate(var(--angle));opacity:0}10%{opacity:.8}90%{opacity:.6}100%{transform:translateY(650px) rotate(calc(var(--angle) + 130deg));opacity:0}}@keyframes newParticles{0%{opacity:.9;transform:scale(.6)}100%{opacity:0;transform:scale(1.6) translateY(-12px)}}@media(prefers-reduced-motion:reduce){.completion-particles{display:none}}
+
+/* Result release: a single expanding burst, with no repeated flashes. */
+.result-impact-fx{position:absolute;inset:0;z-index:3;pointer-events:none;opacity:0;overflow:hidden}
+.result-impact-fx:before,.result-impact-fx:after{content:'';position:absolute;left:50%;top:48%;width:160px;height:160px;margin:-80px;border-radius:50%;pointer-events:none}
+.result-impact-fx:before{border:3px solid var(--accent);box-shadow:0 0 28px var(--accent),inset 0 0 25px var(--accent)}
+.result-impact-fx:after{width:330px;height:330px;margin:-165px;background:repeating-conic-gradient(from 8deg,transparent 0deg 19deg,var(--accent) 20deg 21deg,transparent 22deg 30deg);mask-image:radial-gradient(transparent 22%,#0008 39%,transparent 69%)}
+.result-impact-fx i{position:absolute;left:50%;top:48%;font-style:normal;font-size:26px;color:var(--accent);text-shadow:0 0 16px var(--accent);opacity:0}
+.result-impact .result-impact-fx{animation:impactLayer 1.55s both}
+.result-impact .result-impact-fx:before{animation:impactRing 1.3s cubic-bezier(.1,.6,.15,1) both}
+.result-impact .result-impact-fx:after{animation:impactRays 1.25s ease-out both}
+.result-impact .result-impact-fx i{animation:impactParticle 1.4s var(--delay) cubic-bezier(.12,.65,.2,1) both}
+.result-impact .rarity-badge{animation:impactBadge .8s ease-out both}
+.result-impact .dominant{animation:impactReadout .65s .12s ease-out both}
+@keyframes impactLayer{0%{opacity:0}8%,55%{opacity:1}100%{opacity:0}}
+@keyframes impactRing{from{transform:scale(.25);opacity:1}to{transform:scale(3.2);opacity:0}}
+@keyframes impactRays{from{transform:scale(.4) rotate(-12deg);opacity:1}to{transform:scale(1.6) rotate(12deg);opacity:0}}
+@keyframes impactParticle{0%{transform:translate(-50%,-50%) scale(.3);opacity:0}15%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) rotate(var(--spin)) scale(.8);opacity:0}}
+@keyframes impactBadge{0%{transform:scale(1.45);filter:brightness(1.8)}100%{transform:scale(1);filter:brightness(1)}}
+@keyframes impactReadout{from{transform:translateY(12px);opacity:.25}to{transform:translateY(0);opacity:1}}
+.reduced .result-impact-fx{display:none}.reduced .result-impact .rarity-badge,.reduced .result-impact .dominant{animation:none}
+@media(prefers-reduced-motion:reduce){.result-impact-fx{display:none}.result-impact .rarity-badge,.result-impact .dominant{animation:none}}
