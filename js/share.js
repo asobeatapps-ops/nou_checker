@@ -20,3 +20,11 @@ export async function renderImage(result,{format='square',includeName=false,snap
  const blob=await new Promise((resolve,reject)=>canvas.toBlob(b=>b?resolve(b):reject(Error('画像を生成できませんでした。')),'image/png'));canvas.width=canvas.height=1;return blob}
 export async function copyText(text){if(navigator.clipboard?.writeText){try{await navigator.clipboard.writeText(text);return true}catch{}}const field=document.createElement('textarea');field.value=text;field.style.position='fixed';field.style.opacity='0';document.body.append(field);field.select();let copied=false;try{copied=document.execCommand('copy')}catch{}field.remove();return copied}
 export async function nativeShare(blob,result,{format='square',includeName=false}={}){const file=new File([blob],fileName(format),{type:'image/png'});if(!navigator.share||!navigator.canShare?.({files:[file]}))return{supported:false};try{await navigator.share({title:'脳内チェッカー｜ASOBEAT',text:shareText(result,includeName),files:[file]});return{supported:true,cancelled:false}}catch(error){if(error.name==='AbortError')return{supported:true,cancelled:true};throw error}}
+
+// Keep a single prepared PNG in memory so navigator.share runs in the click gesture.
+export class PreparedShareImage{
+ constructor(){this.clear()}
+ clear(){this.serial=(this.serial||0)+1;this.entry=null}
+ get(result,includeName=false){return this.entry?.result===result&&this.entry.includeName===includeName?this.entry.blob:null}
+ async prepare(result,includeName,generate){this.clear();const serial=this.serial;try{const blob=await generate();if(this.serial!==serial)return false;this.entry={result,includeName,blob};return true}catch{if(this.serial===serial)this.entry=null;return false}}
+}
