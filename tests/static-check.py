@@ -13,7 +13,7 @@ p=Page();html=Path('index.html').read_text();p.feed(html);assert len(p.ids)==len
 for ref in p.refs:assert Path(ref).is_file(),ref
 for f in Path('js').glob('*.js'):
  subprocess.run(['node','--check',str(f)],check=True)
- for ref in re.findall(r"(?:from |import\()'([^']+)'",f.read_text()):assert(f.parent/ref).is_file(),ref
+ for ref in re.findall(r"(?:from |import\()'([^']+)'",f.read_text()):assert(f.parent/ref.split('?')[0]).is_file(),ref
  assert 'innerHTML' not in f.read_text(),f
 logic=Path('js/diagnosis.js').read_text();assert 'Math.random' not in logic and 'Date.' not in logic
 assert re.search(r'<div id="resultAd" hidden ',html);assert html.count('https://asobeatapps-ops.github.io/gamehome/')==1
