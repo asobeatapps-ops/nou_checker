@@ -11,7 +11,8 @@
     "test:images": "node tests/visual-cases.cjs",
     "test:memory": "node tests/memory-browser.cjs",
     "test:interactions": "node tests/interactions-browser.cjs",
-    "check": "python3 tests/static-check.py"
+    "check": "python3 tests/static-check.py",
+    "test:slow-init": "node tests/slow-init-browser.cjs"
   },
   "dependencies": {
     "three": "0.180.0"
