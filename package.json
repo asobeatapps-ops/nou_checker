@@ -1,0 +1,22 @@
+{
+  "name": "asobeat-nou-checker",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:distribution": "node tests/distribution.mjs",
+    "test:browser": "node tests/browser.cjs",
+    "test:audio": "node tests/audio-browser.cjs",
+    "test:images": "node tests/visual-cases.cjs",
+    "test:memory": "node tests/memory-browser.cjs",
+    "test:interactions": "node tests/interactions-browser.cjs",
+    "check": "python3 tests/static-check.py"
+  },
+  "dependencies": {
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}

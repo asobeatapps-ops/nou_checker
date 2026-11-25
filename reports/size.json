@@ -1,0 +1,6 @@
+{
+  "initialRawBytes": 811920,
+  "initialGzipBytes": 210661,
+  "ogpBytes": 889030,
+  "note": "OGP is metadata and is not fetched by ordinary page load. Gzip estimate is per file, not an on-wire measurement."
+}

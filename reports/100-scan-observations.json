@@ -1,0 +1,167 @@
+[
+  {
+    "nodes": 242,
+    "canvases": 1,
+    "heap": 4262848,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2961439
+  },
+  {
+    "nodes": 247,
+    "canvases": 1,
+    "heap": 4592724,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2961818
+  },
+  {
+    "nodes": 252,
+    "canvases": 1,
+    "heap": 4633908,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2961947
+  },
+  {
+    "nodes": 252,
+    "canvases": 1,
+    "heap": 4680396,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962062
+  },
+  {
+    "nodes": 267,
+    "canvases": 1,
+    "heap": 4699016,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962135
+  },
+  {
+    "nodes": 257,
+    "canvases": 1,
+    "heap": 4720768,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962227
+  },
+  {
+    "nodes": 267,
+    "canvases": 1,
+    "heap": 4763224,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962227
+  },
+  {
+    "nodes": 242,
+    "canvases": 1,
+    "heap": 4814336,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962255
+  },
+  {
+    "nodes": 242,
+    "canvases": 1,
+    "heap": 4841500,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962255
+  },
+  {
+    "nodes": 267,
+    "canvases": 1,
+    "heap": 4864144,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962285
+  },
+  {
+    "nodes": 252,
+    "canvases": 1,
+    "heap": 4881000,
+    "urls": {
+      "created": 0,
+      "revoked": 0
+    },
+    "gpu": {
+      "geometries": 8,
+      "textures": 0,
+      "programs": 5
+    },
+    "backingStore": 2962315
+  }
+]

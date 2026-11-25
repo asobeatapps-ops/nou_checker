@@ -1,0 +1,86 @@
+[
+  {
+    "label": "LEGENDARY",
+    "format": "square",
+    "rarity": "LEGENDARY",
+    "elements": 1,
+    "status": "PASS"
+  },
+  {
+    "label": "LEGENDARY",
+    "format": "portrait",
+    "rarity": "LEGENDARY",
+    "elements": 1,
+    "status": "PASS"
+  },
+  {
+    "label": "NORMAL",
+    "format": "square",
+    "rarity": "NORMAL",
+    "elements": 5,
+    "status": "PASS"
+  },
+  {
+    "label": "NORMAL",
+    "format": "portrait",
+    "rarity": "NORMAL",
+    "elements": 5,
+    "status": "PASS"
+  },
+  {
+    "label": "CRITICAL",
+    "format": "square",
+    "rarity": "CRITICAL",
+    "elements": 4,
+    "status": "PASS"
+  },
+  {
+    "label": "CRITICAL",
+    "format": "portrait",
+    "rarity": "CRITICAL",
+    "elements": 4,
+    "status": "PASS"
+  },
+  {
+    "label": "RARE",
+    "format": "square",
+    "rarity": "RARE",
+    "elements": 3,
+    "status": "PASS"
+  },
+  {
+    "label": "RARE",
+    "format": "portrait",
+    "rarity": "RARE",
+    "elements": 3,
+    "status": "PASS"
+  },
+  {
+    "label": "seven",
+    "format": "square",
+    "rarity": "NORMAL",
+    "elements": 7,
+    "status": "PASS"
+  },
+  {
+    "label": "seven",
+    "format": "portrait",
+    "rarity": "NORMAL",
+    "elements": 7,
+    "status": "PASS"
+  },
+  {
+    "label": "long",
+    "format": "square",
+    "rarity": "RARE",
+    "elements": 5,
+    "status": "PASS"
+  },
+  {
+    "label": "long",
+    "format": "portrait",
+    "rarity": "RARE",
+    "elements": 5,
+    "status": "PASS"
+  }
+]

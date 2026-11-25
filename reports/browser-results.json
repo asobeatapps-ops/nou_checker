@@ -1,0 +1,62 @@
+[
+  {
+    "label": "pc",
+    "status": "PASS"
+  },
+  {
+    "label": "pc-webkit",
+    "status": "PASS"
+  },
+  {
+    "label": "small-iphone",
+    "status": "PASS"
+  },
+  {
+    "label": "iphone",
+    "status": "PASS"
+  },
+  {
+    "label": "large-iphone",
+    "status": "PASS"
+  },
+  {
+    "label": "android",
+    "status": "PASS"
+  },
+  {
+    "label": "tablet",
+    "status": "PASS"
+  },
+  {
+    "label": "landscape",
+    "status": "PASS"
+  },
+  {
+    "label": "storage-denied",
+    "status": "PASS"
+  },
+  {
+    "label": "os-reduced",
+    "status": "PASS"
+  },
+  {
+    "label": "scan-state-and-settings",
+    "status": "PASS"
+  },
+  {
+    "label": "all-title-completion",
+    "status": "PASS"
+  },
+  {
+    "label": "image-and-sharing",
+    "status": "PASS"
+  },
+  {
+    "label": "webgl-context-loss",
+    "status": "PASS"
+  },
+  {
+    "label": "100-consecutive-scans",
+    "status": "PASS"
+  }
+]

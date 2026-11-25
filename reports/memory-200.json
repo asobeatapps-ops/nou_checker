@@ -1,0 +1,307 @@
+{
+  "samples": [
+    {
+      "scan": 10,
+      "used": 3905364,
+      "backing": 2961550
+    },
+    {
+      "scan": 20,
+      "used": 3914816,
+      "backing": 2961666
+    },
+    {
+      "scan": 30,
+      "used": 3943124,
+      "backing": 2961754
+    },
+    {
+      "scan": 40,
+      "used": 3959456,
+      "backing": 2961883
+    },
+    {
+      "scan": 50,
+      "used": 3979864,
+      "backing": 2961915
+    },
+    {
+      "scan": 60,
+      "used": 4021860,
+      "backing": 2961980
+    },
+    {
+      "scan": 70,
+      "used": 4055448,
+      "backing": 2962054
+    },
+    {
+      "scan": 80,
+      "used": 4061400,
+      "backing": 2962120
+    },
+    {
+      "scan": 90,
+      "used": 4090032,
+      "backing": 2962135
+    },
+    {
+      "scan": 100,
+      "used": 4108284,
+      "backing": 2962167
+    },
+    {
+      "scan": 110,
+      "used": 4115580,
+      "backing": 2962191
+    },
+    {
+      "scan": 120,
+      "used": 4116440,
+      "backing": 2962231
+    },
+    {
+      "scan": 130,
+      "used": 4121908,
+      "backing": 2962217
+    },
+    {
+      "scan": 140,
+      "used": 4123068,
+      "backing": 2962217
+    },
+    {
+      "scan": 150,
+      "used": 4123424,
+      "backing": 2962228
+    },
+    {
+      "scan": 160,
+      "used": 4123444,
+      "backing": 2962267
+    },
+    {
+      "scan": 170,
+      "used": 4125760,
+      "backing": 2962275
+    },
+    {
+      "scan": 180,
+      "used": 4131572,
+      "backing": 2962265
+    },
+    {
+      "scan": 190,
+      "used": 4143688,
+      "backing": 2962261
+    },
+    {
+      "scan": 200,
+      "used": 4167656,
+      "backing": 2962283
+    }
+  ],
+  "resources": [
+    {
+      "scan": 10,
+      "nodes": 262,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 20,
+      "nodes": 252,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 30,
+      "nodes": 262,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 40,
+      "nodes": 252,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 50,
+      "nodes": 262,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 60,
+      "nodes": 247,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 70,
+      "nodes": 262,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 80,
+      "nodes": 242,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 90,
+      "nodes": 257,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 100,
+      "nodes": 257,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 110,
+      "nodes": 247,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 120,
+      "nodes": 257,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 130,
+      "nodes": 242,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 140,
+      "nodes": 252,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 150,
+      "nodes": 262,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 160,
+      "nodes": 247,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 170,
+      "nodes": 262,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 180,
+      "nodes": 247,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 190,
+      "nodes": 237,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    },
+    {
+      "scan": 200,
+      "nodes": 267,
+      "canvas": 1,
+      "gpu": {
+        "geometries": 8,
+        "textures": 0,
+        "programs": 5
+      }
+    }
+  ],
+  "last100GrowthBytes": 52076
+}

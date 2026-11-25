@@ -1,0 +1,20 @@
+[
+  {
+    "label": "pc",
+    "status": "PASS",
+    "notes": 59,
+    "contexts": 1,
+    "skipStopsVoices": true,
+    "mute": true,
+    "noTitleOrResultBgm": true
+  },
+  {
+    "label": "iphone",
+    "status": "PASS",
+    "notes": 51,
+    "contexts": 1,
+    "skipStopsVoices": true,
+    "mute": true,
+    "noTitleOrResultBgm": true
+  }
+]
