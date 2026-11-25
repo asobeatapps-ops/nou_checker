@@ -1,7 +1,13 @@
-import {TITLES} from './data.js?v=1.0.6';
+import {TITLES} from './data.js?v=1.1.0';
 export const STORAGE_KEY='asobeat_brain_checker_v1';
-const RARITY_ORDER=Object.freeze(['NORMAL','RARE','CRITICAL','LEGENDARY']);
-export function sanitize(raw){const o=raw&&typeof raw==='object'?raw:{},s=o.settings&&typeof o.settings==='object'?o.settings:{};const data={schemaVersion:1,titles:[...new Set(Array.isArray(o.titles)?o.titles.filter(id=>Number.isInteger(id)&&id>=1&&id<=TITLES.length):[])].sort((a,b)=>a-b),settings:{sound:typeof s.sound==='boolean'?s.sound:true,reduced:typeof s.reduced==='boolean'?s.reduced:false}};if(o.rarityByTitle&&typeof o.rarityByTitle==='object'){data.rarityByTitle={};for(const id of data.titles){const rarity=o.rarityByTitle[id];if(RARITY_ORDER.includes(rarity))data.rarityByTitle[id]=rarity}}return data}
+const RARITY_ORDER=Object.freeze(['NORMAL','RARE','EPIC','LEGENDARY']);
+export function sanitize(raw){
+ const o=raw&&typeof raw==='object'?raw:{},s=o.settings&&typeof o.settings==='object'?o.settings:{},legacy=o.schemaVersion!==2;
+ const mapId=id=>Number.isInteger(id)?legacy?(id>=1&&id<=20?id:id===31?21:null):(id>=1&&id<=TITLES.length?id:null):null;
+ const data={schemaVersion:2,titles:[...new Set((Array.isArray(o.titles)?o.titles:[]).map(mapId).filter(id=>id!==null))].sort((a,b)=>a-b),settings:{sound:typeof s.sound==='boolean'?s.sound:true,reduced:typeof s.reduced==='boolean'?s.reduced:false}};
+ if(o.rarityByTitle&&typeof o.rarityByTitle==='object'){data.rarityByTitle={};for(const[key,value]of Object.entries(o.rarityByTitle)){const id=mapId(Number(key)),rarity=value==='CRITICAL'?'EPIC':value;if(id!==null&&data.titles.includes(id)&&RARITY_ORDER.includes(rarity))data.rarityByTitle[id]=rarity}}
+ return data
+}
 export class Collection{
  constructor(storage){this.storage=storage;this.failed=false;try{this.data=sanitize(JSON.parse(storage.getItem(STORAGE_KEY)||'{}'))}catch{this.failed=true;this.data=sanitize({})}}
  persist(){try{this.storage.setItem(STORAGE_KEY,JSON.stringify(this.data));this.failed=false}catch{this.failed=true}}

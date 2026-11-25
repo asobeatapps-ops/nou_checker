@@ -1,3 +1,4 @@
+export const SCAN_TIERS=Object.freeze(Object.fromEntries(Object.entries({NORMAL:{level:0,particles:0,rings:0},RARE:{level:1,particles:12,rings:2},EPIC:{level:2,particles:22,rings:3},LEGENDARY:{level:3,particles:34,rings:4}}).map(([k,v])=>[k,Object.freeze(v)])));
 export const PHASES=Object.freeze([
  {at:0,id:'activate',label:'SYSTEM ACTIVATED',text:'被験者を認証しています',progress:0},
  {at:500,id:'formation',label:'NEURAL CONNECTION',text:'ニューロンを接続しています',progress:10},

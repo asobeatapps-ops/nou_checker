@@ -1,4 +1,4 @@
-import {ELEMENTS} from './data.js?v=1.0.5';
+import {ELEMENTS} from './data.js?v=1.1.0';
 export const ELEMENT_EMOJI=Object.freeze(['🍔','😴','💰','😍','🎮','🛍️','🛋️','🥺','🚀','📱','🔥','🕊️','😈','💭','🫥','🎲','💢','🔍','💖','🤩','💋']);
 // Flat, symmetric top view. The exact percentages remain in the adjacent list/bar.
 export function brainOutline(c){c.beginPath();c.moveTo(0,-105);c.bezierCurveTo(-20,-140,-76,-139,-94,-111);c.bezierCurveTo(-137,-118,-166,-88,-157,-61);c.bezierCurveTo(-192,-35,-183,8,-160,20);c.bezierCurveTo(-181,56,-151,90,-128,91);c.bezierCurveTo(-117,128,-51,140,-16,116);c.quadraticCurveTo(0,104,16,116);c.bezierCurveTo(51,140,117,128,128,91);c.bezierCurveTo(151,90,181,56,160,20);c.bezierCurveTo(183,8,192,-35,157,-61);c.bezierCurveTo(166,-88,137,-118,94,-111);c.bezierCurveTo(76,-139,20,-140,0,-105);c.closePath()}

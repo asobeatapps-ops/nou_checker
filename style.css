@@ -36,3 +36,31 @@
 .title-card.unlocked[data-rarity] .title-symbol,.title-card.unlocked[data-rarity] .card-rarity{color:var(--card-accent)}
 .title-card.unlocked[data-rarity].selected{outline-color:var(--card-accent)}
 .card-rarity{font-size:10px;letter-spacing:.8px;font-weight:800}
+/* Blue / purple / gold analysis tiers, confined to the brain viewport. */
+.scan-rarity-fx{position:absolute;inset:0;pointer-events:none;z-index:2;overflow:hidden;display:none;color:var(--accent)}
+.scan-screen:is([data-rarity="RARE"],[data-rarity="EPIC"],[data-rarity="LEGENDARY"]) .scan-rarity-fx{display:block}
+.scan-rarity-fx b{position:absolute;left:50%;top:50%;width:210px;height:210px;margin:-105px;border:2px solid currentColor;border-radius:50%;opacity:.45;box-shadow:0 0 16px color-mix(in srgb,currentColor 40%,transparent);animation:scanTierRing 2.7s linear infinite}
+.scan-rarity-fx b:nth-child(2){width:270px;height:270px;margin:-135px;border-style:dashed;animation-direction:reverse;animation-duration:6s;opacity:.35}
+.scan-rarity-fx b:nth-child(3),.scan-rarity-fx b:nth-child(4),.scan-rarity-fx em{display:none}
+.scan-rarity-fx i{position:absolute;top:50%;left:50%;width:4px;height:4px;border-radius:50%;background:currentColor;box-shadow:0 0 10px currentColor;animation:scanTierSpark var(--duration) var(--delay) ease-out infinite;font-style:normal;font-size:20px}
+.scan-screen[data-rarity="EPIC"] .scan-rarity-fx b:nth-child(3),.scan-screen[data-rarity="LEGENDARY"] .scan-rarity-fx b:nth-child(3){display:block;width:320px;height:110px;margin:-55px -160px;border-width:3px;transform:rotate(-25deg);animation:scanTierOrbit 3s linear infinite}
+.scan-screen[data-rarity="EPIC"] .scan-rarity-fx{background:radial-gradient(ellipse at center,#b58aff15,transparent 64%)}
+.scan-screen[data-rarity="EPIC"] .scan-rarity-fx i{width:5px;height:5px;box-shadow:0 0 16px currentColor}
+.scan-screen[data-rarity="LEGENDARY"] .scan-rarity-fx{background:radial-gradient(ellipse at center,#ffd36a24,transparent 70%)}
+.scan-screen[data-rarity="LEGENDARY"] .scan-rarity-fx b{border-width:3px;box-shadow:0 0 28px #ffd36a55}
+.scan-screen[data-rarity="LEGENDARY"] .scan-rarity-fx b:nth-child(4){display:block;width:325px;height:325px;margin:-162.5px;border-style:dotted;animation-duration:8s}
+.scan-screen[data-rarity="LEGENDARY"] .scan-rarity-fx em{display:block;position:absolute;inset:-20%;background:repeating-conic-gradient(from 10deg,transparent 0deg 18deg,#ffd36a35 19deg 20deg,transparent 21deg 30deg);mask-image:radial-gradient(transparent 24%,#000 38%,transparent 68%);animation:scanTierRays 12s linear infinite}
+.scan-screen[data-rarity="LEGENDARY"] .scan-rarity-fx i{width:6px;height:6px;box-shadow:0 0 18px currentColor}
+.scan-screen.quiet .scan-rarity-fx{visibility:hidden}
+.scan-screen.release .scan-rarity-fx{animation:scanTierRelease .6s ease-out both}
+.scan-screen.release[data-rarity="EPIC"] .scan-rarity-fx{filter:brightness(1.35)}
+.scan-screen.release[data-rarity="LEGENDARY"] .scan-rarity-fx{filter:brightness(1.7)}
+@keyframes scanTierRing{0%{transform:scale(.9) rotate(0deg);opacity:.2}50%{opacity:.6}100%{transform:scale(1.08) rotate(180deg);opacity:.2}}
+@keyframes scanTierOrbit{to{transform:rotate(335deg)}}
+@keyframes scanTierRays{to{transform:rotate(360deg)}}
+@keyframes scanTierSpark{0%{transform:translate(0,0) scale(.3);opacity:0}20%{opacity:.85}100%{transform:translate(var(--sx),var(--sy)) scale(.5);opacity:0}}
+@keyframes scanTierRelease{from{transform:scale(.9);opacity:1}to{transform:scale(1.65);opacity:0}}
+.reduced .scan-rarity-fx{display:none!important}
+@media(prefers-reduced-motion:reduce){.scan-rarity-fx{display:none!important}}
+
+.scan-screen:has(.resume-overlay:not([hidden])) .scan-rarity-fx *{animation-play-state:paused}

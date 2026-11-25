@@ -43,23 +43,33 @@
     {
       "titleId": 1,
       "title": "歩く胃袋",
-      "input": "被験者17🧠",
-      "pattern": "biased",
+      "input": "テスト 8 カナ",
+      "pattern": "balanced",
       "elements": [
         {
           "id": 1,
-          "percent": 79,
+          "percent": 20,
           "name": "食欲"
         },
         {
-          "id": 2,
-          "percent": 19,
-          "name": "睡眠欲"
+          "id": 4,
+          "percent": 20,
+          "name": "恋愛欲"
         },
         {
-          "id": 16,
-          "percent": 2,
-          "name": "運任せ"
+          "id": 13,
+          "percent": 20,
+          "name": "悪戯心"
+        },
+        {
+          "id": 20,
+          "percent": 20,
+          "name": "カオス"
+        },
+        {
+          "id": 21,
+          "percent": 20,
+          "name": "H（エッチ）"
         }
       ],
       "rarity": "NORMAL",
@@ -178,63 +188,48 @@
     {
       "titleId": 5,
       "title": "人間型ゲーム機",
-      "input": "被験者37🧠",
-      "pattern": "balanced",
+      "input": "SUBJECT 11 X",
+      "pattern": "bipolar",
       "elements": [
         {
           "id": 5,
-          "percent": 29,
+          "percent": 50,
           "name": "ゲーム欲"
         },
         {
-          "id": 1,
-          "percent": 28,
-          "name": "食欲"
-        },
-        {
-          "id": 3,
-          "percent": 20,
-          "name": "金欲"
-        },
-        {
-          "id": 20,
-          "percent": 16,
-          "name": "カオス"
-        },
-        {
-          "id": 2,
-          "percent": 4,
-          "name": "睡眠欲"
-        },
-        {
-          "id": 17,
-          "percent": 3,
-          "name": "怒り"
+          "id": 7,
+          "percent": 50,
+          "name": "怠惰"
         }
       ],
-      "rarity": "NORMAL",
+      "rarity": "RARE",
       "passed": true
     },
     {
       "titleId": 6,
       "title": "財布の破壊神",
-      "input": "SUBJECT 31 X",
-      "pattern": "biased",
+      "input": "被験者2🧠",
+      "pattern": "balanced",
       "elements": [
         {
           "id": 6,
-          "percent": 52,
+          "percent": 25,
           "name": "物欲"
         },
         {
-          "id": 14,
-          "percent": 29,
-          "name": "妄想"
+          "id": 7,
+          "percent": 25,
+          "name": "怠惰"
         },
         {
           "id": 10,
-          "percent": 19,
+          "percent": 25,
           "name": "スマホ欲"
+        },
+        {
+          "id": 19,
+          "percent": 25,
+          "name": "優しさ"
         }
       ],
       "rarity": "NORMAL",
@@ -357,34 +352,49 @@
           "name": "カオス"
         }
       ],
-      "rarity": "CRITICAL",
+      "rarity": "EPIC",
       "passed": true
     },
     {
       "titleId": 11,
       "title": "努力の化身",
-      "input": "研究対象-60-あいう",
-      "pattern": "biased",
+      "input": "被験者12🧠",
+      "pattern": "balanced",
       "elements": [
         {
           "id": 11,
-          "percent": 76,
+          "percent": 31,
           "name": "向上心"
         },
         {
-          "id": 20,
-          "percent": 21,
-          "name": "カオス"
+          "id": 9,
+          "percent": 27,
+          "name": "逃避欲"
         },
         {
-          "id": 5,
+          "id": 18,
+          "percent": 15,
+          "name": "好奇心"
+        },
+        {
+          "id": 16,
+          "percent": 12,
+          "name": "運任せ"
+        },
+        {
+          "id": 17,
+          "percent": 8,
+          "name": "怒り"
+        },
+        {
+          "id": 4,
+          "percent": 5,
+          "name": "恋愛欲"
+        },
+        {
+          "id": 2,
           "percent": 2,
-          "name": "ゲーム欲"
-        },
-        {
-          "id": 14,
-          "percent": 1,
-          "name": "妄想"
+          "name": "睡眠欲"
         }
       ],
       "rarity": "NORMAL",
@@ -418,33 +428,43 @@
     {
       "titleId": 13,
       "title": "トラブルメーカー",
-      "input": "SUBJECT 21 X",
-      "pattern": "biased",
+      "input": "研究対象-10-あいう",
+      "pattern": "balanced",
       "elements": [
         {
           "id": 13,
-          "percent": 55,
+          "percent": 31,
           "name": "悪戯心"
         },
         {
-          "id": 18,
-          "percent": 41,
-          "name": "好奇心"
+          "id": 14,
+          "percent": 29,
+          "name": "妄想"
+        },
+        {
+          "id": 2,
+          "percent": 17,
+          "name": "睡眠欲"
         },
         {
           "id": 19,
-          "percent": 2,
+          "percent": 8,
           "name": "優しさ"
         },
         {
-          "id": 9,
-          "percent": 1,
-          "name": "逃避欲"
+          "id": 10,
+          "percent": 5,
+          "name": "スマホ欲"
         },
         {
-          "id": 11,
-          "percent": 1,
-          "name": "向上心"
+          "id": 16,
+          "percent": 5,
+          "name": "運任せ"
+        },
+        {
+          "id": 20,
+          "percent": 5,
+          "name": "カオス"
         }
       ],
       "rarity": "NORMAL",
@@ -453,21 +473,36 @@
     {
       "titleId": 14,
       "title": "脳内ファンタジー",
-      "input": "sample_19_é",
-      "pattern": "extreme",
+      "input": "テスト 3 カナ",
+      "pattern": "bipolar",
       "elements": [
         {
           "id": 14,
-          "percent": 86,
+          "percent": 44,
           "name": "妄想"
         },
         {
-          "id": 21,
-          "percent": 14,
-          "name": "H（エッチ）"
+          "id": 3,
+          "percent": 38,
+          "name": "金欲"
+        },
+        {
+          "id": 6,
+          "percent": 8,
+          "name": "物欲"
+        },
+        {
+          "id": 13,
+          "percent": 5,
+          "name": "悪戯心"
+        },
+        {
+          "id": 17,
+          "percent": 5,
+          "name": "怒り"
         }
       ],
-      "rarity": "CRITICAL",
+      "rarity": "RARE",
       "passed": true
     },
     {
@@ -502,7 +537,7 @@
           "name": "好奇心"
         }
       ],
-      "rarity": "CRITICAL",
+      "rarity": "EPIC",
       "passed": true
     },
     {
@@ -597,7 +632,7 @@
           "name": "逃避欲"
         }
       ],
-      "rarity": "CRITICAL",
+      "rarity": "EPIC",
       "passed": true
     },
     {
@@ -672,281 +707,6 @@
     },
     {
       "titleId": 21,
-      "title": "食って寝るだけの生命体",
-      "input": "テスト 258 カナ",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 1,
-          "percent": 50,
-          "name": "食欲"
-        },
-        {
-          "id": 2,
-          "percent": 30,
-          "name": "睡眠欲"
-        },
-        {
-          "id": 14,
-          "percent": 20,
-          "name": "妄想"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 22,
-      "title": "自宅警備のエリート",
-      "input": "SUBJECT 11 X",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 5,
-          "percent": 50,
-          "name": "ゲーム欲"
-        },
-        {
-          "id": 7,
-          "percent": 50,
-          "name": "怠惰"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 23,
-      "title": "億万長者（脳内限定）",
-      "input": "テスト 3 カナ",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 14,
-          "percent": 44,
-          "name": "妄想"
-        },
-        {
-          "id": 3,
-          "percent": 38,
-          "name": "金欲"
-        },
-        {
-          "id": 6,
-          "percent": 8,
-          "name": "物欲"
-        },
-        {
-          "id": 13,
-          "percent": 5,
-          "name": "悪戯心"
-        },
-        {
-          "id": 17,
-          "percent": 5,
-          "name": "怒り"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 24,
-      "title": "来世に期待する人",
-      "input": "被験者147🧠",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 7,
-          "percent": 42,
-          "name": "怠惰"
-        },
-        {
-          "id": 9,
-          "percent": 30,
-          "name": "逃避欲"
-        },
-        {
-          "id": 1,
-          "percent": 20,
-          "name": "食欲"
-        },
-        {
-          "id": 6,
-          "percent": 5,
-          "name": "物欲"
-        },
-        {
-          "id": 5,
-          "percent": 3,
-          "name": "ゲーム欲"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 25,
-      "title": "愛よりお金",
-      "input": "sample_74_é",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 3,
-          "percent": 44,
-          "name": "金欲"
-        },
-        {
-          "id": 4,
-          "percent": 38,
-          "name": "恋愛欲"
-        },
-        {
-          "id": 20,
-          "percent": 18,
-          "name": "カオス"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 26,
-      "title": "脳内会議が終わらない人",
-      "input": "SUBJECT 41 X",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 18,
-          "percent": 48,
-          "name": "好奇心"
-        },
-        {
-          "id": 14,
-          "percent": 31,
-          "name": "妄想"
-        },
-        {
-          "id": 2,
-          "percent": 21,
-          "name": "睡眠欲"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 27,
-      "title": "欲望のデパート",
-      "input": "研究対象-10-あいう",
-      "pattern": "balanced",
-      "elements": [
-        {
-          "id": 13,
-          "percent": 31,
-          "name": "悪戯心"
-        },
-        {
-          "id": 14,
-          "percent": 29,
-          "name": "妄想"
-        },
-        {
-          "id": 2,
-          "percent": 17,
-          "name": "睡眠欲"
-        },
-        {
-          "id": 19,
-          "percent": 8,
-          "name": "優しさ"
-        },
-        {
-          "id": 10,
-          "percent": 5,
-          "name": "スマホ欲"
-        },
-        {
-          "id": 16,
-          "percent": 5,
-          "name": "運任せ"
-        },
-        {
-          "id": 20,
-          "percent": 5,
-          "name": "カオス"
-        }
-      ],
-      "rarity": "NORMAL",
-      "passed": true
-    },
-    {
-      "titleId": 28,
-      "title": "理性のかたまり",
-      "input": "研究対象-120-あいう",
-      "pattern": "bipolar",
-      "elements": [
-        {
-          "id": 11,
-          "percent": 50,
-          "name": "向上心"
-        },
-        {
-          "id": 12,
-          "percent": 50,
-          "name": "平穏"
-        }
-      ],
-      "rarity": "RARE",
-      "passed": true
-    },
-    {
-      "titleId": 29,
-      "title": "バランス型人類",
-      "input": "被験者2🧠",
-      "pattern": "balanced",
-      "elements": [
-        {
-          "id": 6,
-          "percent": 25,
-          "name": "物欲"
-        },
-        {
-          "id": 7,
-          "percent": 25,
-          "name": "怠惰"
-        },
-        {
-          "id": 10,
-          "percent": 25,
-          "name": "スマホ欲"
-        },
-        {
-          "id": 19,
-          "percent": 25,
-          "name": "優しさ"
-        }
-      ],
-      "rarity": "NORMAL",
-      "passed": true
-    },
-    {
-      "titleId": 30,
-      "title": "人類のバグ",
-      "input": "sample_979_é",
-      "pattern": "pure",
-      "elements": [
-        {
-          "id": 20,
-          "percent": 100,
-          "name": "カオス"
-        }
-      ],
-      "rarity": "LEGENDARY",
-      "passed": true
-    },
-    {
-      "titleId": 31,
       "title": "脳内ピンク注意報",
       "input": "テスト 43 カナ",
       "pattern": "biased",
@@ -982,5 +742,5 @@
     }
   ],
   "elementsSeen": 21,
-  "bipolarObservedSpecialPercent": 36.62718048682961
+  "bipolarObservedSpecialPercent": 36.69715599540161
 }
