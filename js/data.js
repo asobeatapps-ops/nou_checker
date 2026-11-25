@@ -139,7 +139,7 @@ export const ELEMENTS=Object.freeze([
     "titleId": 20,
     "comment": "解析装置では理解できない構造が検出されました。"
   },
-  {"id":21,"name":"H（エッチ）","color":"#FF78B7","titleId":14,"comment":"ちょっと大人な妄想が、脳内でこっそり上映中です。"}
+  {"id":21,"name":"H（エッチ）","color":"#FF78B7","titleId":31,"comment":"ちょっと大人な妄想が、脳内でこっそり上映中です。"}
 ].map(Object.freeze));
 export const TITLES=Object.freeze([
   {
@@ -291,7 +291,8 @@ export const TITLES=Object.freeze([
     "id": 30,
     "name": "人類のバグ",
     "comment": "正常な人類の脳内構造を確認できませんでした。仕様外の存在です。"
-  }
+  },
+  {"id":31,"name":"脳内ピンク注意報","comment":"解析モニターがピンク色に染まりました。ちょっと大人な妄想、ただいま脳内上映中です。"}
 ].map(Object.freeze));
 export const PATTERNS=Object.freeze([
  {id:'balanced',name:'バランス型',rate:.30,rarity:'NORMAL'}, {id:'biased',name:'偏り型',rate:.30,rarity:'NORMAL'}, {id:'bipolar',name:'二極型',rate:.20,rarity:'RARE'}, {id:'extreme',name:'超特化型',rate:.15,rarity:'CRITICAL'}, {id:'pure',name:'完全特化型',rate:.05,rarity:'LEGENDARY'}

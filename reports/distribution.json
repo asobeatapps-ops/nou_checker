@@ -944,6 +944,41 @@
       ],
       "rarity": "LEGENDARY",
       "passed": true
+    },
+    {
+      "titleId": 31,
+      "title": "脳内ピンク注意報",
+      "input": "テスト 43 カナ",
+      "pattern": "biased",
+      "elements": [
+        {
+          "id": 21,
+          "percent": 62,
+          "name": "H（エッチ）"
+        },
+        {
+          "id": 6,
+          "percent": 18,
+          "name": "物欲"
+        },
+        {
+          "id": 16,
+          "percent": 16,
+          "name": "運任せ"
+        },
+        {
+          "id": 15,
+          "percent": 3,
+          "name": "無"
+        },
+        {
+          "id": 1,
+          "percent": 1,
+          "name": "食欲"
+        }
+      ],
+      "rarity": "NORMAL",
+      "passed": true
     }
   ],
   "elementsSeen": 21,
