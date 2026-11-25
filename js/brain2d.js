@@ -2,14 +2,19 @@ import {ELEMENTS} from './data.js?v=1.0.3';
 export const ELEMENT_EMOJI=Object.freeze(['🍔','😴','💰','😍','🎮','🛍️','🛋️','🥺','🚀','📱','🔥','🕊️','😈','💭','🫥','🎲','💢','🔍','💖','🤩']);
 // Flat, symmetric top view. The exact percentages remain in the adjacent list/bar.
 export function brainOutline(c){c.beginPath();c.moveTo(0,-105);c.bezierCurveTo(-20,-140,-76,-139,-94,-111);c.bezierCurveTo(-137,-118,-166,-88,-157,-61);c.bezierCurveTo(-192,-35,-183,8,-160,20);c.bezierCurveTo(-181,56,-151,90,-128,91);c.bezierCurveTo(-117,128,-51,140,-16,116);c.quadraticCurveTo(0,104,16,116);c.bezierCurveTo(51,140,117,128,128,91);c.bezierCurveTo(151,90,181,56,160,20);c.bezierCurveTo(183,8,192,-35,157,-61);c.bezierCurveTo(166,-88,137,-118,94,-111);c.bezierCurveTo(76,-139,20,-140,0,-105);c.closePath()}
+// One character for each percentage point, in fixed positions inside the existing outline.
+export const ELEMENT_WORDS=Object.freeze(['食','眠','金','愛','遊','物','休','認','逃','携','向','穏','悪','妄','無','運','怒','好','優','乱']);
+function outlinePolygon(){const points=[];let previous=[0,0];const path={beginPath(){},moveTo(x,y){previous=[x,y];points.push(previous)},bezierCurveTo(ax,ay,bx,by,x,y){const[px,py]=previous;for(let i=1;i<=20;i++){const t=i/20,u=1-t;points.push([u*u*u*px+3*u*u*t*ax+3*u*t*t*bx+t*t*t*x,u*u*u*py+3*u*u*t*ay+3*u*t*t*by+t*t*t*y])}previous=[x,y]},quadraticCurveTo(ax,ay,x,y){const[px,py]=previous;for(let i=1;i<=20;i++){const t=i/20,u=1-t;points.push([u*u*px+2*u*t*ax+t*t*x,u*u*py+2*u*t*ay+t*t*y])}previous=[x,y]},closePath(){}};brainOutline(path);return points}
+const POLYGON=outlinePolygon();
+function inside(x,y){let hit=false;for(let i=0,j=POLYGON.length-1;i<POLYGON.length;j=i++){const[a,b]=POLYGON[i],[u,v]=POLYGON[j];if((b>y)!==(v>y)&&x<(u-a)*(y-b)/(v-b)+a)hit=!hit}return hit}
+const WORD_POSITIONS=(()=>{const cells=[];for(let y=-110;y<=110;y+=22)for(let x=-165;x<=165;x+=22){if([[-10,-10],[10,-10],[-10,10],[10,10]].every(([dx,dy])=>inside(x+dx,y+dy)))cells.push({x,y})}cells.sort((a,b)=>a.y-b.y||a.x-b.x);if(cells.length<100)throw Error('Brain word grid must fit 100 cells');const selected=Array.from({length:100},(_,i)=>cells[Math.floor((i+.5)*cells.length/100)]);return Object.freeze(selected.sort((a,b)=>(a.x*.7+a.y)-(b.x*.7+b.y)||a.y-b.y).map(Object.freeze))})();
+export function brainWordLayout(parts){let offset=0;const glyphs=[];for(const part of parts){for(let i=0;i<part.percent;i++){const position=WORD_POSITIONS[offset++];if(position)glyphs.push({...position,id:part.id,text:ELEMENT_WORDS[part.id-1],color:ELEMENTS[part.id-1].color})}}return glyphs}
 export function drawBrain2D(c,x,y,w,h,parts){
  if(!parts?.length)return;
  c.save();const scale=Math.min(w/400,h/300);c.translate(x+w/2,y+h/2);c.scale(scale,scale);
- brainOutline(c);c.save();c.clip();let top=-140;
- for(const part of parts){const height=280*part.percent/100,e=ELEMENTS[part.id-1];c.fillStyle=e.color;c.fillRect(-190,top,380,height+.5);c.strokeStyle='#071624';c.lineWidth=1.5;c.beginPath();c.moveTo(-190,top);c.lineTo(190,top);c.stroke();if(part.percent>=8){const cy=top+height/2,font=part.percent>=50?28:part.percent>=15?19:14;c.textAlign='center';c.textBaseline='middle';c.fillStyle='#061321';c.font=`800 ${font}px sans-serif`;c.fillText(`${ELEMENT_EMOJI[part.id-1]} ${e.name} ${part.percent}%`,0,cy,285)}top+=height}
- c.restore();brainOutline(c);c.strokeStyle='#D9F7FF';c.lineWidth=3;c.stroke();
- c.strokeStyle='#07162455';c.lineWidth=2.2;c.lineCap='round';for(const side of[-1,1]){c.beginPath();c.moveTo(side*20,-93);c.bezierCurveTo(side*52,-111,side*92,-86,side*75,-64);c.bezierCurveTo(side*40,-52,side*66,-23,side*106,-40);c.bezierCurveTo(side*146,-44,side*147,-6,side*118,5);c.stroke();c.beginPath();c.moveTo(side*39,26);c.bezierCurveTo(side*81,3,side*109,29,side*84,47);c.bezierCurveTo(side*54,64,side*114,77,side*112,92);c.stroke()}
- c.restore();
+ brainOutline(c);c.fillStyle='#0D2030';c.fill();c.save();c.clip();c.textAlign='center';c.textBaseline='middle';c.font='800 20px "Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif';
+ for(const glyph of brainWordLayout(parts)){c.fillStyle=glyph.color;c.fillText(glyph.text,glyph.x,glyph.y,21)}
+ c.restore();brainOutline(c);c.strokeStyle='#D9F7FF';c.lineWidth=3;c.stroke();c.restore();
 }
 export class ResultBrainView{
  constructor(root){this.root=root;this.canvas=document.createElement('canvas');this.canvas.dataset.renderer='2d';this.canvas.setAttribute('role','img');this.canvas.style.cssText='display:block;width:100%;height:100%;';root.append(this.canvas);this.ctx=this.canvas.getContext('2d');this.dirty=true;this.width=0;this.height=0}

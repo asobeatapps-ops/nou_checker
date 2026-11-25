@@ -3,10 +3,10 @@ import {ELEMENTS,TITLES,PATTERNS,RARITIES} from './data.js?v=1.0.3';
 import {Collection} from './collection.js?v=1.0.3';
 import {ScanSession,phaseAt} from './effects.js';
 import {BrainView} from './brain3d.js';
-import {ResultBrainView,ELEMENT_EMOJI} from './brain2d.js?v=1.0.3';
+import {ResultBrainView,ELEMENT_EMOJI} from './brain2d.js?v=1.0.4';
 import {AudioSystem} from './audio.js';
 import {bindSettings,effectiveReduced} from './settings.js';
-import {shareText,xURL,renderImage,fileName,nativeShare,copyText,PreparedShareImage} from './share.js?v=1.0.3';
+import {shareText,xURL,renderImage,fileName,nativeShare,copyText,PreparedShareImage} from './share.js?v=1.0.4';
 const $=id=>document.getElementById(id),pad=n=>String(n).padStart(2,'0'),media=matchMedia('(prefers-reduced-motion: reduce)');
 let storage;try{storage=window.localStorage}catch{storage={getItem(){throw Error('unavailable')},setItem(){throw Error('unavailable')}}}
 for(let i=0;i<22;i++){const p=document.createElement('i');p.style.left=(i*37%100)+'%';p.style.setProperty('--delay',(-i*.13)+'s');p.style.setProperty('--duration',(2.4+i%5*.25)+'s');p.style.setProperty('--angle',(i*53%360)+'deg');$('completeParticles').append(p)}
