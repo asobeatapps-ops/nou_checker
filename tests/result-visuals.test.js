@@ -13,11 +13,11 @@ function fixture(){
  const view=new BrainView(root);view.init3D({...THREE,WebGLRenderer:Renderer});return{view,glyphs};
 }
 const result=id=>({elements:[{id,percent:100}]});
-test('all twenty diagnosis elements have a glyph; 3D glyph textures are reused and released',()=>{
- const{view,glyphs}=fixture();assert.equal(ELEMENT_EMOJI.length,20);assert.equal(new Set(ELEMENT_EMOJI).size,20);assert.equal(view.emojiSprites.length,14);assert.equal(view.emojiGroup.visible,false);
- for(let id=1;id<=20;id++){view.setResult(result(id));assert.equal(view.emojiGroup.visible,true);assert.ok(view.emojiSprites.every(sprite=>sprite.material.map===view.emojiTextures.get(id)))}
+test('all twenty-one diagnosis elements have a glyph; 3D glyph textures are reused and released',()=>{
+ const{view,glyphs}=fixture();assert.equal(ELEMENT_EMOJI.length,21);assert.equal(new Set(ELEMENT_EMOJI).size,21);assert.equal(view.emojiSprites.length,14);assert.equal(view.emojiGroup.visible,false);
+ for(let id=1;id<=21;id++){view.setResult(result(id));assert.equal(view.emojiGroup.visible,true);assert.ok(view.emojiSprites.every(sprite=>sprite.material.map===view.emojiTextures.get(id)))}
  assert.deepEqual(glyphs,ELEMENT_EMOJI);const count=view.resources.length;
- for(let n=0;n<100;n++)view.setResult(result(n%20+1));assert.equal(view.resources.length,count);assert.equal(view.emojiTextures.size,20);
+ for(let n=0;n<100;n++)view.setResult(result(n%21+1));assert.equal(view.resources.length,count);assert.equal(view.emojiTextures.size,21);
  const texture=view.emojiTextures.get(3);let disposed=false;texture.addEventListener('dispose',()=>disposed=true);view.setResult(null);assert.equal(view.emojiGroup.visible,false);view.dispose();assert.equal(disposed,true);assert.equal(view.emojiTextures.size,0);
 });
 test('result burst settles, reduced motion suppresses burst and glyphs stay result-only',()=>{

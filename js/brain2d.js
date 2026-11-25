@@ -1,9 +1,9 @@
-import {ELEMENTS} from './data.js?v=1.0.3';
-export const ELEMENT_EMOJI=Object.freeze(['🍔','😴','💰','😍','🎮','🛍️','🛋️','🥺','🚀','📱','🔥','🕊️','😈','💭','🫥','🎲','💢','🔍','💖','🤩']);
+import {ELEMENTS} from './data.js?v=1.0.5';
+export const ELEMENT_EMOJI=Object.freeze(['🍔','😴','💰','😍','🎮','🛍️','🛋️','🥺','🚀','📱','🔥','🕊️','😈','💭','🫥','🎲','💢','🔍','💖','🤩','💋']);
 // Flat, symmetric top view. The exact percentages remain in the adjacent list/bar.
 export function brainOutline(c){c.beginPath();c.moveTo(0,-105);c.bezierCurveTo(-20,-140,-76,-139,-94,-111);c.bezierCurveTo(-137,-118,-166,-88,-157,-61);c.bezierCurveTo(-192,-35,-183,8,-160,20);c.bezierCurveTo(-181,56,-151,90,-128,91);c.bezierCurveTo(-117,128,-51,140,-16,116);c.quadraticCurveTo(0,104,16,116);c.bezierCurveTo(51,140,117,128,128,91);c.bezierCurveTo(151,90,181,56,160,20);c.bezierCurveTo(183,8,192,-35,157,-61);c.bezierCurveTo(166,-88,137,-118,94,-111);c.bezierCurveTo(76,-139,20,-140,0,-105);c.closePath()}
 // One character for each percentage point, in fixed positions inside the existing outline.
-export const ELEMENT_WORDS=Object.freeze(['食','眠','金','愛','遊','物','休','認','逃','携','向','穏','悪','妄','無','運','怒','好','優','乱']);
+export const ELEMENT_WORDS=Object.freeze(['食','眠','金','愛','遊','物','休','認','逃','携','向','穏','悪','妄','無','運','怒','好','優','乱','H']);
 function outlinePolygon(){const points=[];let previous=[0,0];const path={beginPath(){},moveTo(x,y){previous=[x,y];points.push(previous)},bezierCurveTo(ax,ay,bx,by,x,y){const[px,py]=previous;for(let i=1;i<=20;i++){const t=i/20,u=1-t;points.push([u*u*u*px+3*u*u*t*ax+3*u*t*t*bx+t*t*t*x,u*u*u*py+3*u*u*t*ay+3*u*t*t*by+t*t*t*y])}previous=[x,y]},quadraticCurveTo(ax,ay,x,y){const[px,py]=previous;for(let i=1;i<=20;i++){const t=i/20,u=1-t;points.push([u*u*px+2*u*t*ax+t*t*x,u*u*py+2*u*t*ay+t*t*y])}previous=[x,y]},closePath(){}};brainOutline(path);return points}
 const POLYGON=outlinePolygon();
 function inside(x,y){let hit=false;for(let i=0,j=POLYGON.length-1;i<POLYGON.length;j=i++){const[a,b]=POLYGON[i],[u,v]=POLYGON[j];if((b>y)!==(v>y)&&x<(u-a)*(y-b)/(v-b)+a)hit=!hit}return hit}

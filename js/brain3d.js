@@ -1,6 +1,6 @@
 import {createCortex,cortexPoint,elementAt} from './model.js';
-import {ELEMENTS} from './data.js';
-export const ELEMENT_EMOJI=Object.freeze(['🍔','😴','💰','😍','🎮','🛍️','🛋️','🥺','🚀','📱','🔥','🕊️','😈','💭','🫥','🎲','💢','🔍','💖','🤩']);
+import {ELEMENTS} from './data.js?v=1.0.5';
+export const ELEMENT_EMOJI=Object.freeze(['🍔','😴','💰','😍','🎮','🛍️','🛋️','🥺','🚀','📱','🔥','🕊️','😈','💭','🫥','🎲','💢','🔍','💖','🤩','💋']);
 const EMOJI_ANCHORS=Object.freeze(Array.from({length:14},(_,i)=>{const theta=.25+(i%4)*.62,phi=.55+Math.floor(i/4)*.63,side=i%2?1:-1;const position=cortexPoint(phi,theta,side).map(v=>v*1.09);return{position,region:(theta/Math.PI+(side>0?1:0))/2}}));
 const CYAN='#59F5E7';
 const rgb=hex=>[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)/255);

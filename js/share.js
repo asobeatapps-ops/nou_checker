@@ -1,6 +1,6 @@
-import {ELEMENTS,TITLES,RARITIES,NOTICE} from './data.js?v=1.0.3';
-import {graphemes} from './diagnosis.js';
-import {drawBrain2D} from './brain2d.js?v=1.0.4';
+import {ELEMENTS,TITLES,RARITIES,NOTICE} from './data.js?v=1.0.5';
+import {graphemes} from './diagnosis.js?v=1.0.5';
+import {drawBrain2D} from './brain2d.js?v=1.0.5';
 export const GAME_URL='https://asobeatapps-ops.github.io/nou_checker/';
 export function shareText(result,includeName=false){const title=TITLES[result.titleId-1];return['私の脳内を解析した結果……',includeName?`被験者：${result.displayName}`:'',...result.elements.map(p=>`${ELEMENTS[p.id-1].name}：${p.percent}%`),'',`【${result.rarity}】`,`称号：${title.name}`,result.comment,'','あなたの脳内は何でできてる？','#脳内チェッカー #ASOBEAT',GAME_URL].filter(x=>x!==null).join('\n')}
 export function xURL(result,includeName=false){const url=new URL('https://x.com/intent/tweet');url.searchParams.set('text',shareText(result,includeName));return url.href}

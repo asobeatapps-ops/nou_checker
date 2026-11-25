@@ -138,7 +138,8 @@ export const ELEMENTS=Object.freeze([
     "color": "#C957BA",
     "titleId": 20,
     "comment": "解析装置では理解できない構造が検出されました。"
-  }
+  },
+  {"id":21,"name":"H（エッチ）","color":"#FF78B7","titleId":14,"comment":"ちょっと大人な妄想が、脳内でこっそり上映中です。"}
 ].map(Object.freeze));
 export const TITLES=Object.freeze([
   {
