@@ -15,6 +15,7 @@ for f in Path('js').glob('*.js'):
  subprocess.run(['node','--check',str(f)],check=True)
  for ref in re.findall(r"(?:from |import\()'([^']+)'",f.read_text()):assert(f.parent/ref.split('?')[0]).is_file(),ref
  assert 'innerHTML' not in f.read_text(),f
+assert all(text not in html for text in ['名前をひとつ。解析は5秒。','本格装置で、しょうもない欲望まで。','被験者名','NEURAL SYSTEM 01','ドラッグで回転'])
 logic=Path('js/diagnosis.js').read_text();assert 'Math.random' not in logic and 'Date.' not in logic
 assert re.search(r'<div id="resultAd" hidden ',html);assert html.count('https://asobeatapps-ops.github.io/gamehome/')==1
 assert not re.search(r'<script[^>]+src="https?://',html)

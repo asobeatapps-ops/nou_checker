@@ -28,3 +28,11 @@
 @keyframes impactReadout{from{transform:translateY(12px);opacity:.25}to{transform:translateY(0);opacity:1}}
 .reduced .result-impact-fx{display:none}.reduced .result-impact .rarity-badge,.reduced .result-impact .dominant{animation:none}
 @media(prefers-reduced-motion:reduce){.result-impact-fx{display:none}.result-impact .rarity-badge,.result-impact .dominant{animation:none}}
+
+/* Earned rarity is recorded per title; historical titles without rarity stay neutral. */
+.header #openSettings{margin-left:auto}
+.result-brain>canvas[data-renderer="2d"]{position:absolute;inset:0;pointer-events:none}
+.title-card.unlocked[data-rarity]{border-color:var(--card-accent);background:linear-gradient(145deg,color-mix(in srgb,var(--card-accent) 19%,#0b1b2b),#0b1b2b);box-shadow:inset 0 3px 0 var(--card-accent)}
+.title-card.unlocked[data-rarity] .title-symbol,.title-card.unlocked[data-rarity] .card-rarity{color:var(--card-accent)}
+.title-card.unlocked[data-rarity].selected{outline-color:var(--card-accent)}
+.card-rarity{font-size:10px;letter-spacing:.8px;font-weight:800}

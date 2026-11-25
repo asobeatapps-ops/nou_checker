@@ -295,5 +295,5 @@ export const TITLES=Object.freeze([
 export const PATTERNS=Object.freeze([
  {id:'balanced',name:'バランス型',rate:.30,rarity:'NORMAL'}, {id:'biased',name:'偏り型',rate:.30,rarity:'NORMAL'}, {id:'bipolar',name:'二極型',rate:.20,rarity:'RARE'}, {id:'extreme',name:'超特化型',rate:.15,rarity:'CRITICAL'}, {id:'pure',name:'完全特化型',rate:.05,rarity:'LEGENDARY'}
 ].map(Object.freeze));
-export const RARITIES=Object.freeze({NORMAL:{color:'#59F5E7',label:'NORMAL'},RARE:{color:'#A98AFF',label:'RARE'},CRITICAL:{color:'#FF5268',label:'CRITICAL'},LEGENDARY:{color:'#FFD36A',label:'LEGENDARY'}});
+export const RARITIES=Object.freeze({NORMAL:{color:'#59F5E7',label:'NORMAL'},RARE:{color:'#59A8FF',label:'RARE'},CRITICAL:{color:'#B58AFF',label:'CRITICAL'},LEGENDARY:{color:'#FFD36A',label:'LEGENDARY'}});
 export const NOTICE='本ゲームは娯楽用の診断です。科学的・医学的・心理学的根拠に基づく診断ではありません。';
